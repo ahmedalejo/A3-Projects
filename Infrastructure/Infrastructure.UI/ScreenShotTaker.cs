@@ -18,6 +18,7 @@ namespace Infrastructure.UI
         public const string TimestampVarArg = "Timestamp";
         public const string CurrentUserVarArg = "CurrentUser";
         public const string CurrentUserNameVarArg = "CurrentUserName";
+        public const string MachineNameVarArg = "MachineName";
         public const string CurrentUserDomainNameVarArg = "CurrentUserDomainName";
 
         private static Dictionary<string, Func<string>> PlaceHolderMappings { get; set; }
@@ -26,6 +27,7 @@ namespace Infrastructure.UI
         {
             PlaceHolderMappings = new Dictionary<string, Func<string>>{
                 {TimestampVarArg            , () => DateTime.Now.ToString("yyyy-MM-dd@hh.mm.ss")},
+                {MachineNameVarArg          , () => Environment.MachineName},
                 {CurrentUserNameVarArg      , () => Environment.UserName},
                 {CurrentUserDomainNameVarArg, () => Environment.UserDomainName},
                 {CurrentUserVarArg          , () => Environment.UserDomainName + "@" + Environment.UserName}
@@ -53,9 +55,14 @@ namespace Infrastructure.UI
 
         /// <summary> Captures an Active Window, Desktop, Window or Control by hWnd or .NET Contro/Form and save it to a specified file.  </summary>
         /// <param name="filename">Filename.
+        /// <param name="filename">Filename.
         /// <para>* If extension is omitted, it's calculated from the type of file</para>
         /// <para>* If path is omitted, defaults to %TEMP%</para>
-        /// <para>* Use %NOW% to put a timestamp in the filename</para></param>
+        /// <para>* Use %Timestamp% to put a timestamp in the filename</para></param>
+        /// <para>* Use %CurrentUser% to put the {%CurrentUserDomainName%}@{%CurrentUserName%} in the filename</para></param>
+        /// <para>* Use %CurrentUserName% to put the current user name in the filename</para></param>
+        /// <para>* Use %CurrentUserDomainName% to put the current user domain name in the filename</para></param>
+        /// <para>* Use %MachineName% to put the machine name in the filename</para></param>
         /// <param name="mode">Optional. The default value is CaptureMode.Window.</param>
         /// <param name="format">Optional file save mode.  Default is PNG</param>
         public static void CaptureAndSave(string filename, CaptureMode mode = CaptureMode.Window, ImageFormat format = null)
@@ -66,9 +73,14 @@ namespace Infrastructure.UI
         /// <summary> Captures a specific window (or control) and save it to a specified file.  </summary>
         /// <param name="handle">hWnd (handle) of the window to capture</param>
         /// <param name="filename">Filename.
+        /// <param name="filename">Filename.
         /// <para>* If extension is omitted, it's calculated from the type of file</para>
         /// <para>* If path is omitted, defaults to %TEMP%</para>
-        /// <para>* Use %NOW% to put a timestamp in the filename</para></param>
+        /// <para>* Use %Timestamp% to put a timestamp in the filename</para></param>
+        /// <para>* Use %CurrentUser% to put the {%CurrentUserDomainName%}@{%CurrentUserName%} in the filename</para></param>
+        /// <para>* Use %CurrentUserName% to put the current user name in the filename</para></param>
+        /// <para>* Use %CurrentUserDomainName% to put the current user domain name in the filename</para></param>
+        /// <para>* Use %MachineName% to put the machine name in the filename</para></param>
         /// <param name="format">Optional file save mode.  Default is PNG</param>
         public static void SaveImage(this IntPtr windowHandle, string filename = null, ImageFormat format = null)
         {
@@ -106,7 +118,10 @@ namespace Infrastructure.UI
         /// <para>* If extension is omitted, it's calculated from the type of file</para>
         /// <para>* If path is omitted, defaults to %TEMP%</para>
         /// <para>* Use %Timestamp% to put a timestamp in the filename</para></param>
-        /// <para>* Use %CurrentUser% to put the machine name in the filename</para></param>
+        /// <para>* Use %CurrentUser% to put the {%CurrentUserDomainName%}@{%CurrentUserName%} in the filename</para></param>
+        /// <para>* Use %CurrentUserName% to put the current user name in the filename</para></param>
+        /// <para>* Use %CurrentUserDomainName% to put the current user domain name in the filename</para></param>
+        /// <para>* Use %MachineName% to put the machine name in the filename</para></param>
         /// <param name="format">Optional file save mode.  Default is PNG</param>
         public static string SaveImage(this Image image, string filename = null, ImageFormat format = null)
         {

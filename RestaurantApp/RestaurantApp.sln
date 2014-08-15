@@ -25,49 +25,23 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantApp.Voting.Busine
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantApp.Voting.Common", "RestaurantApp.Voting.Common\RestaurantApp.Voting.Common.csproj", "{BD47AAE1-D97C-41DC-883D-423E795FB930}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantApp.Voting.AcceptanceTests", "RestaurantApp.Voting.AcceptanceTests\RestaurantApp.Voting.AcceptanceTests.csproj", "{EE2ED748-0E45-4477-ADB5-4C2A031EBEBE}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Common", "..\Infrastructure\Infrastructure.Common\Infrastructure.Common.csproj", "{BF04A818-3985-4395-8BAD-76756CD834D9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.UI.WinForms", "..\Infrastructure\Infrastructure.UI.WinForms\Infrastructure.UI.WinForms.csproj", "{7D088FD5-7C53-4AC1-917B-1695DEF31690}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.UI", "..\Infrastructure\Infrastructure.UI\Infrastructure.UI.csproj", "{11487B4E-9A9D-4C83-AB6F-AAE5F5E36FBF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantApp.Voting.IntegrationTests", "RestaurantApp.Voting.IntegrationTests\RestaurantApp.Voting.IntegrationTests.csproj", "{EE2ED748-0E45-4477-ADB5-4C2A031EBEBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantApp.Voting.AcceptanceTests", "RestaurantApp.Voting.AcceptanceTests\RestaurantApp.Voting.AcceptanceTests.csproj", "{FFEC1A71-95F7-49E3-8E54-682FAE650ECC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.UI.VisualStudio.UITesting", "Infrastructure.UI.VisualStudio.UITesting\Infrastructure.UI.VisualStudio.UITesting.csproj", "{68168FBB-8034-427C-8E0C-11AF725CCFDB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Specs", "Specs", "{DA0771FF-F11D-45A6-8DE9-1E9F6A4CEE08}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fundamental", "Fundamental", "{4443F80A-8B99-4AD1-A0FF-38DA8C0B1540}"
+EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 9
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://ahmedalejo.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = ..\\Infrastructure\\Infrastructure.Common\\Infrastructure.Common.csproj
-		SccProjectTopLevelParentUniqueName1 = RestaurantApp.sln
-		SccProjectName1 = ../Infrastructure/Infrastructure.Common
-		SccLocalPath1 = ..\\Infrastructure\\Infrastructure.Common
-		SccProjectUniqueName2 = ..\\Infrastructure\\Infrastructure.UI.WinForms\\Infrastructure.UI.WinForms.csproj
-		SccProjectTopLevelParentUniqueName2 = RestaurantApp.sln
-		SccProjectName2 = ../Infrastructure/Infrastructure.UI.WinForms
-		SccLocalPath2 = ..\\Infrastructure\\Infrastructure.UI.WinForms
-		SccProjectUniqueName3 = ..\\Infrastructure\\Infrastructure.UI\\Infrastructure.UI.csproj
-		SccProjectTopLevelParentUniqueName3 = RestaurantApp.sln
-		SccProjectName3 = ../Infrastructure/Infrastructure.UI
-		SccLocalPath3 = ..\\Infrastructure\\Infrastructure.UI
-		SccProjectUniqueName4 = RestaurantApp.Voting.AcceptanceTests\\RestaurantApp.Voting.AcceptanceTests.csproj
-		SccProjectTopLevelParentUniqueName4 = RestaurantApp.sln
-		SccProjectName4 = RestaurantApp.Voting.AcceptanceTests
-		SccLocalPath4 = RestaurantApp.Voting.AcceptanceTests
-		SccProjectUniqueName5 = RestaurantApp.Voting.Business\\RestaurantApp.Voting.Business.csproj
-		SccProjectName5 = RestaurantApp.Voting.Business
-		SccLocalPath5 = RestaurantApp.Voting.Business
-		SccProjectUniqueName6 = RestaurantApp.Voting.Common\\RestaurantApp.Voting.Common.csproj
-		SccProjectName6 = RestaurantApp.Voting.Common
-		SccLocalPath6 = RestaurantApp.Voting.Common
-		SccProjectUniqueName7 = RestaurantApp.Voting.DesktopApp\\RestaurantApp.Voting.DesktopApp.csproj
-		SccProjectName7 = RestaurantApp.Voting.DesktopApp
-		SccLocalPath7 = RestaurantApp.Voting.DesktopApp
-		SccProjectUniqueName8 = RestaurantApp.Voting.Repository\\RestaurantApp.Voting.Repository.csproj
-		SccProjectName8 = RestaurantApp.Voting.Repository
-		SccLocalPath8 = RestaurantApp.Voting.Repository
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -89,10 +63,6 @@ Global
 		{BD47AAE1-D97C-41DC-883D-423E795FB930}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD47AAE1-D97C-41DC-883D-423E795FB930}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD47AAE1-D97C-41DC-883D-423E795FB930}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EE2ED748-0E45-4477-ADB5-4C2A031EBEBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EE2ED748-0E45-4477-ADB5-4C2A031EBEBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EE2ED748-0E45-4477-ADB5-4C2A031EBEBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EE2ED748-0E45-4477-ADB5-4C2A031EBEBE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BF04A818-3985-4395-8BAD-76756CD834D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BF04A818-3985-4395-8BAD-76756CD834D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF04A818-3985-4395-8BAD-76756CD834D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -105,14 +75,29 @@ Global
 		{11487B4E-9A9D-4C83-AB6F-AAE5F5E36FBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11487B4E-9A9D-4C83-AB6F-AAE5F5E36FBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11487B4E-9A9D-4C83-AB6F-AAE5F5E36FBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE2ED748-0E45-4477-ADB5-4C2A031EBEBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE2ED748-0E45-4477-ADB5-4C2A031EBEBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE2ED748-0E45-4477-ADB5-4C2A031EBEBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE2ED748-0E45-4477-ADB5-4C2A031EBEBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFEC1A71-95F7-49E3-8E54-682FAE650ECC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFEC1A71-95F7-49E3-8E54-682FAE650ECC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFEC1A71-95F7-49E3-8E54-682FAE650ECC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFEC1A71-95F7-49E3-8E54-682FAE650ECC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68168FBB-8034-427C-8E0C-11AF725CCFDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68168FBB-8034-427C-8E0C-11AF725CCFDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68168FBB-8034-427C-8E0C-11AF725CCFDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68168FBB-8034-427C-8E0C-11AF725CCFDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{EE2ED748-0E45-4477-ADB5-4C2A031EBEBE} = {2E6D211E-9173-4966-B40F-769787BF94C3}
 		{BF04A818-3985-4395-8BAD-76756CD834D9} = {3098A486-9D99-463C-AB9A-F12189928A95}
 		{7D088FD5-7C53-4AC1-917B-1695DEF31690} = {3098A486-9D99-463C-AB9A-F12189928A95}
 		{11487B4E-9A9D-4C83-AB6F-AAE5F5E36FBF} = {3098A486-9D99-463C-AB9A-F12189928A95}
+		{EE2ED748-0E45-4477-ADB5-4C2A031EBEBE} = {2E6D211E-9173-4966-B40F-769787BF94C3}
+		{FFEC1A71-95F7-49E3-8E54-682FAE650ECC} = {2E6D211E-9173-4966-B40F-769787BF94C3}
+		{68168FBB-8034-427C-8E0C-11AF725CCFDB} = {3098A486-9D99-463C-AB9A-F12189928A95}
+		{4443F80A-8B99-4AD1-A0FF-38DA8C0B1540} = {DA0771FF-F11D-45A6-8DE9-1E9F6A4CEE08}
 	EndGlobalSection
 EndGlobal

@@ -1,8 +1,8 @@
 ﻿using System.Drawing;
 using System.Drawing.Imaging;
-using System.Windows.Forms;
+using Microsoft.VisualStudio.TestTools.UITesting;
 
-namespace Infrastructure.UI.WinForms
+namespace Infrastructure.UI.VisualStudio.UITesting
 {
     public static class ScreenShotTakerExtensions
     {
@@ -19,18 +19,18 @@ namespace Infrastructure.UI.WinForms
         /// <para>* Use %MachineName% to put the machine name in the filename</para></param>
         /// <param name="format">Optional file save mode.  Default is PNG</param>
         /// <seealso cref="ScreenShotTaker"/>
-        public static void SaveImage(this Control control, string filename = null, ImageFormat format = null)
+        public static void SaveImage(this UITestControl control, string filename = null, ImageFormat format = null)
         {
             Capture(control).SaveImage(filename: filename, format: format);
         }
 
-        /// <summary> Captures a .NET Control, Form, UserControl, etc. </summary>
+        /// <summary> Captures a .NET UITestControl, etc. </summary>
         /// <param name="control">Object to capture</param>
         /// <returns> Bitmap of control's area </returns>
-        public static Bitmap Capture(this Control control)
+        public static Bitmap Capture(this UITestControl control)
         {
-            return control.IsHandleCreated
-                ? control.Handle.Capture()
+            return control.Exists
+                ? new Bitmap(control.CaptureImage())
                 : null;
         }
     }

@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FFEC1A71-95F7-49E3-8E54-682FAE650ECC}</ProjectGuid>
+    <ProjectGuid>{EE2ED748-0E45-4477-ADB5-4C2A031EBEBE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RestaurantApp.Voting.AcceptanceTests</RootNamespace>
-    <AssemblyName>RestaurantApp.Voting.AcceptanceTests</AssemblyName>
+    <RootNamespace>RestaurantApp.Voting.IntegrationTests</RootNamespace>
+    <AssemblyName>RestaurantApp.Voting.IntegrationTests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -89,7 +89,7 @@
     <Compile Include="Hooks\StartUpHooks.cs" />
     <Compile Include="Hooks\DatabaseHooks.cs" />
     <Compile Include="RestaurantVoterTestDbInitializer.cs" />
-    <Compile Include="TestDateTimeProvider.cs" />
+    <Compile Include="Helpers\Mocks\TestDateTimeProvider.cs" />
     <Compile Include="Steps\SetUpSteps.cs" />
     <Compile Include="Steps\TimeSteps.cs" />
     <Compile Include="Steps\VotingSteps.cs" />
@@ -161,7 +161,9 @@
       <Name>RestaurantApp.Voting.Repository</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Reports\" />
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
