@@ -21,6 +21,7 @@ Cenário: Um professional só poderia votar em um restaurante por dia.
         E o 'Bruno' deveria poder votar no restaurante 'Colegiais' 'hoje'
 
 ```
+
 ```gherkin
 @requires_database
 Funcionalidade: Estória 2 - O mesmo restaurante não pode ser escolhido mais de uma vez durante a semana.
@@ -46,7 +47,7 @@ Esquema do Cenário: O mesmo restaurante não deve poder ser escolhido mais de u
             | Big E, Plazza, Calibu, Bellview | Aderopo, Paulo | paulo   | Bellview | hoje              | hoje          | Big E, Plazza, Calibu, Bellview |
 ```
 
-```gerkin
+```gherkin
 @requires_database
 Funcionalidade: Estória 3 - Mostrar de alguma forma o resultado da votação.
     Eu como profissional faminto
